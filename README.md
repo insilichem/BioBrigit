@@ -28,7 +28,7 @@ Features
 
 **Modular design:**
 
-* The modular design of this package allows for its use as a command-line application or to be integrated into a larger Python program or pipeline.
+* The modular design of this package allows for its use as a command-line application or to be integrated into a larger Python program or pipeline. In the [script](https://github.com/insilichem/BioBrigit/tree/main/scripts) directory are some of examples on how to integrate the program within a wider pipeline.
 
 Installation
 ------------
