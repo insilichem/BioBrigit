@@ -23,13 +23,6 @@ setup(
     author_email='raul.fernandezdiaz@ucdconnect.ie',
     python_requires='>=3.6',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
     ],
     description="Computational tool for the prediction of metal-binding loading paths in proteins using deep convolutional neural networks.",
     entry_points={
@@ -42,13 +35,17 @@ setup(
     long_description=readme,
     long_description_content_type='text/markdown',
     include_package_data=True,
-    package_data={'': ['*.ckpt', '*.json']},
+    # package_data={'': ['*.ckpt', '*.json']},
+    data_files=[('', ['biobrigit/utils/stats/gaussian_statistics.json',
+                      'biobrigit/utils/stats/residue_statistics.json',
+                      'biobrigit/utils/trained_models/BrigitCNN.bak'
+                      ])]
     keywords='biobrigit',
     name='biobrigit',
     packages=find_packages(),
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/insillichem/BioBrigit',
-    version='0.0.3',
+    version='0.0.4',
     zip_safe=False,
 )
