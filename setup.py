@@ -41,7 +41,7 @@ setup(
     license="BSD license",
     long_description=readme,
     include_package_data=True,
-    package_data={'': ['*.ckpt', '*.json']},
+    package_data={'': ['*.ckpt', '*.json', '*.md']},
     keywords='biobrigit',
     name='biobrigit',
     packages=find_packages(include=['biobrigit', 'biobrigit.*']),
