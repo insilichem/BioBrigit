@@ -114,9 +114,14 @@ License
 -------
 BioBrigit is an open-source software licensed under the BSD-3 Clause License. Check the details in the [LICENSE](https://github.com/raulfd-creator/biobrigit/blob/master/LICENSE) file.
 
+Documentation
+-------------
+More information in the official documentation, [here](https://github.com/insilichem/BioBrigit/blob/main/docs/UsersGuide.pdf).
+
+
 History of versions
 -------------------
-* **v.0.1:** First operative release version.
+* **v.0.0.1:** First operative release version.
 
 OS Compatibility
 ----------------
