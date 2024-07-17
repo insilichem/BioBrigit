@@ -20,7 +20,7 @@ test_requirements = requirements
 
 setup(
     author="Raúl Fernández Díaz",
-    author_email='Raul.FernandezDi@autonoma.cat',
+    author_email='raul.fernandezdiaz@ucdconnect.ie',
     python_requires='>=3.6',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
@@ -40,14 +40,15 @@ setup(
     install_requires=requirements,
     license="BSD license",
     long_description=readme,
+    long_description_content_type='text/markdown',
     include_package_data=True,
-    package_data={'': ['*.ckpt', '*.json', '*.md']},
+    package_data={'': ['*.ckpt', '*.json']},
     keywords='biobrigit',
     name='biobrigit',
-    packages=find_packages(include=['biobrigit', 'biobrigit.*']),
+    packages=find_packages(),
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/RaulFD-creator/biobrigit',
-    version='0.0.2',
+    url='https://github.com/insillichem/BioBrigit',
+    version='0.0.3',
     zip_safe=False,
 )
