@@ -36,16 +36,16 @@ setup(
     long_description_content_type='text/markdown',
     include_package_data=True,
     # package_data={'': ['*.ckpt', '*.json']},
-    data_files=[('', ['biobrigit/utils/stats/gaussian_statistics.json',
-                      'biobrigit/utils/stats/residue_statistics.json',
-                      'biobrigit/utils/trained_models/BrigitCNN.bak'
-                      ])]
+    data_files=[('',
+                 ['biobrigit/utils/stats/gaussian_statistics.json',
+                  'biobrigit/utils/stats/residue_statistics.json',
+                  'biobrigit/utils/trained_models/BrigitCNN.bak'])],
     keywords='biobrigit',
     name='biobrigit',
     packages=find_packages(),
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/insillichem/BioBrigit',
-    version='0.0.4',
+    version='0.0.5',
     zip_safe=False,
 )
