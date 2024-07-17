@@ -17,6 +17,7 @@ from moleculekit.molecule import Molecule
 from moleculekit.tools.atomtyper import prepareProteinForAtomtyping
 from moleculekit.tools.voxeldescriptors import getCenters, getVoxelDescriptors
 from sklearn.cluster import Birch
+from tqdm import tqdm
 
 from .utils.data import CHANNELS
 from .utils.pdb_parser import protein
@@ -43,8 +44,6 @@ class Brigit():
         Initialize a new instance of the class.
         Set CUDA up if any GPU device is available.
         """
-        # TODO: Verify that cuda device is available before setting it
-        # up.
         if device == 'cuda':
             if torch.cuda.is_available():
                 self.device = f'{device}:{device_id}'
@@ -59,7 +58,7 @@ class Brigit():
                 warnings.warn('Using CPU for caluclations, although there is\
                     a CUDA compatible GPU available. Using the GPU would\
                     accelerate significantly the calculations.')
-        self.model = load_model(model, self.device)
+        self.model = load_model(self.device)
 
     def cnn_evaluation(
         self,
@@ -459,11 +458,9 @@ class Brigit():
         num_points = x_dim * y_dim * z_dim
         counter = 0
 
-        for x in range(border, max_x, stride):
+        for x in tqdm(range(border, max_x, stride)):
             for y in range(border, max_y, stride):
                 for z in range(border, max_z, stride):
-                    if (counter % (num_points // 30) == 0):
-                        print(f'{round((counter/num_points)*100, 2)}%')
                     counter += 1
 
                     if vox[:, 5, x, y, z] > occupancy_restrictions:

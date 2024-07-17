@@ -32,43 +32,22 @@ Features
 
 Installation
 ------------
-The recommended environment for using BioBrigit takes advatange of GPU acceleration. However, it is possible to use the tool in CPU-only environments.
 
-The first step is to create an environment with the necessary libraries. Some will be directly installed from source.
-
-```bash
-> conda create -n {name} python=3.9
-> conda activate {name}
-> pip install git+https://github.com/Acellera/moleculekit
-> pip install git+https://github.com/RaulFD-creator/biobrigit
-> conda install pdb2pqr -c acellera -c conda-forge
-> pip install scikit-learn
-```
-
-**Environment set-up _with_ CUDA acelleration**
-
-The last step is to install the deep learning framework:
+It can be directly installed in any conda environment by
 
 ```bash
-> conda install pytorch pytorch-cuda -c pytorch -c nvidia
-> conda install pytorch-lightning tensorboard torchmetrics -c conda-forge
+conda create -n biobrigit python
+conda activate biobrigit
+pip install biobrigit
 ```
 
-**Environment set-up _without_ CUDA acelleration**
-
-If no CUDA device is available, the recommended installation of the deep learning framework is:
-
-```bash
-> conda install pytorch
-> conda install pytorch-lightning tensorboard torchmetrics -c conda-forge
-```
 
 Usage
 -----
 Once the environment is properly set-up the use of the program is relatively simple. The easiest example is:
 
 ```bash
-> biobrigit target metal
+biobrigit target metal
 ```
 
 There are many parameters that can be also tuned, though default use is reccomended.
@@ -97,31 +76,31 @@ The following parameters can also be tuned, but their modification is **not** re
 Searching for copper.
 
 ```bash
-> biobrigit 1dhy Cu
+biobrigit 1dhy Cu
 ```
 
 Searching with generic metal.
 
 ```bash
-> biobrigit 1dhy generic
+biobrigit 1dhy generic
 ```
 
 Searching for multiple metals simultanously.
 
 ```bash
-> biobrigit 1dhy fe,generic
+biobrigit 1dhy fe,generic
 ```
 
 Fast preliminar exploration for binding sites with 4 coordinations, no GPU, and only considering the 4 most likely coordinating residues.
 
 ```bash
-> biobrigit 1dhy Cu --stride 2 --model TinyBrigit --max_coordinators 4 --device cpu --residues 4
+biobrigit 1dhy Cu --stride 2 --model TinyBrigit --max_coordinators 4 --device cpu --residues 4
 ```
 
 Search for small clusters at acidic pH (5.2).
 
 ```bash
-> biobrigit 1dhy Cu --cluster_radius 3 --pH 5.2
+biobrigit 1dhy Cu --cluster_radius 3 --pH 5.2
 ```
 
 Output

@@ -3,16 +3,20 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
+from pathlib import Path
 
-with open('README.md') as readme_file:
-    readme = readme_file.read()
+this_directory = Path(__file__).parent
+readme = (this_directory / "README.md").read_text()
 
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
+requirements = [
+    'scikit-learn',
+    'torch',
+    'moleculekit',
+    'lightning',
+    'pdb2pqr'
+]
 
-requirements = [ ]
-
-test_requirements = [ ]
+test_requirements = requirements
 
 setup(
     author="Raúl Fernández Díaz",
@@ -27,7 +31,7 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
-    description = "Computational tool for the prediction of metal-binding sites in proteins using deep convolutional neural networks.",
+    description="Computational tool for the prediction of metal-binding loading paths in proteins using deep convolutional neural networks.",
     entry_points={
         'console_scripts': [
             'biobrigit=biobrigit.__main__:main',
@@ -35,7 +39,7 @@ setup(
     },
     install_requires=requirements,
     license="BSD license",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     include_package_data=True,
     package_data={'': ['*.ckpt', '*.json']},
     keywords='biobrigit',
@@ -44,6 +48,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/RaulFD-creator/biobrigit',
-    version='0.1.0',
+    version='0.0.1',
     zip_safe=False,
 )

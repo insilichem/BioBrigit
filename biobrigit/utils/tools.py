@@ -318,32 +318,36 @@ def set_up_cuda(device_id: int) -> None:
     torch.cuda.set_device(device_id)
 
 
-def load_model(model: str, device: str, **kwargs) -> BaseModel:
+def load_model(device: str, **kwargs) -> BaseModel:
     path = os.path.join(
-        os.path.dirname(__file__), "trained_models", f'{model}.ckpt'
+        os.path.dirname(__file__), "trained_models",
+        f'BrigitCNN.bak'
     )
-    if model.lower() == 'brigitcnn':
-        model = BrigitCNN.load_from_checkpoint(
-            path,
-            map_location=device,
-            learning_rate=2e-4,
-            neurons_layer=64,
-            size=12,
-            num_dimns=6
-        )
-    elif model.lower() == 'tinybrigit':
-        model = BrigitCNN.load_from_checkpoint(
-            path,
-            map_location=device,
-            learning_rate=2e-4,
-            neurons_layer=16,
-            size=12,
-            num_dimns=6
-        )
-    else:
-        message = f'Model: {model} is not available.'
-        message += ' Please select either BrigitCNN or TinyBrigit.'
-        raise RuntimeError(message)
+    # if model.lower() == 'brigitcnn':
+    model = BrigitCNN.load_from_checkpoint(
+        path,
+        map_location=device,
+        learning_rate=2e-4,
+        neurons_layer=64,
+        size=12,
+        num_dimns=6
+    )
+
+    # elif model.lower() == 'tinybrigit':
+    #     print(torch.load(path)['state_dict'].keys())
+    #     model = BrigitCNN.load_from_checkpoint(
+    #         path,
+    #         map_location=device,
+    #         learning_rate=2e-4,
+    #         neurons_layer=32,
+    #         size=12,
+    #         num_dimns=6
+    #     )
+    #     # val = torch.load(path, map_location='cpu')
+    # else:
+    #     message = f'Model: {model} is not available.'
+    #     message += ' Please select BrigitCNN.'
+    #     raise RuntimeError(message)
     model.to(device)
     model.eval()
     return model
