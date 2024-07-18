@@ -1,7 +1,7 @@
 BioBrigit
 ===============
 
-BioBrigit is a computational tool designed for the prediction of metal diffusion pathways through a protein. It uses a novel scoring function that combines deep learning and previous domain knowledge regarding bioinorganic interactions as described in [Sánchez-Aparicio et al. (2017)](https://chemrxiv.org/engage/chemrxiv/article-details/60c74de1469df46a86f44378). The deep learning part of our hybrid approach consists on a 3D Convolutional Neural Network trained to interpret the biochemical environment to distinguish between metal-binding and non-binding protein regions.
+BioBrigit is a computational tool designed for the prediction of metal diffusion pathways through a protein. It uses a novel scoring function that combines deep learning and previous domain knowledge regarding bioinorganic interactions. The deep learning part of our hybrid approach consists on a 3D Convolutional Neural Network trained to interpret the biochemical environment to distinguish between metal-binding and non-binding protein regions.
  
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RaulFD-creator/biobrigit/master/docs/figures/BioBrigit_dark_border.png" width="850" class="center">
@@ -114,24 +114,12 @@ License
 -------
 BioBrigit is an open-source software licensed under the BSD-3 Clause License. Check the details in the [LICENSE](https://github.com/raulfd-creator/biobrigit/blob/master/LICENSE) file.
 
-Documentation
--------------
-More information in the official documentation, [here](https://github.com/insilichem/BioBrigit/blob/main/docs/UsersGuide.pdf).
-
-
-History of versions
--------------------
-* **v.0.0.1:** First operative release version.
-
-OS Compatibility
+Development Team
 ----------------
-BioBrigit is currently only compatible with Linux, due to some of its dependencies.
 
-If you find some dificulties when installing it in a concrete distribution, please use the issues page to report them.
+- Lead development: [Raul Fernandez-Diaz](https://github.com/RaulFD-creator).
 
 Credits
 -------
-
-This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template. 
 
 Special thanks to [Silvia González López](https://www.linkedin.com/in/silvia-gonz%C3%A1lez-l%C3%B3pez-717558221/) for designing the BioBrigit logo.
