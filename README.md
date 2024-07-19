@@ -94,7 +94,7 @@ biobrigit 1dhy fe,generic
 Fast preliminar exploration for binding sites with 4 coordinations, no GPU, and only considering the 4 most likely coordinating residues.
 
 ```bash
-biobrigit 1dhy Cu --stride 2 --model TinyBrigit --max_coordinators 4 --device cpu --residues 4
+biobrigit 1dhy Cu --stride 3 --max_coordinators 4 --device cpu --residues 4
 ```
 
 Search for small clusters at acidic pH (5.2).
