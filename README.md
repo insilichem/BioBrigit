@@ -117,6 +117,7 @@ BioBrigit is an open-source software licensed under the BSD-3 Clause License. Ch
 Development Team
 ----------------
 
+- Project lead: [Jean-Didier Marechal](https://github.com/JeanDidier).
 - Lead development: [Raul Fernandez-Diaz](https://github.com/RaulFD-creator).
 
 Credits
