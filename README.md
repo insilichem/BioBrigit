@@ -9,6 +9,10 @@ BioBrigit is a computational tool designed for the prediction of metal diffusion
   <img alt="Shows an stylised anvil with a neural network upon it." src=""https://raw.githubusercontent.com/RaulFD-creator/biobrigit/master/docs/figures/BioBrigit_light.png">
 </picture>
 
+Useful links
+----
+
+- **Pre-print:** [https://www.biorxiv.org/content/10.1101/2024.09.19.613875](https://www.biorxiv.org/content/10.1101/2024.09.19.613875)
 
 Features
 --------
