@@ -36,8 +36,8 @@ theme:
       icon:
         repo: fontawesome/brands/github-alt
       language: en
-repo_name: IBM/AutoPeptideML
-repo_url: https://github.com/IBM/AutoPeptideML
+repo_name: insilichem/BioBrigit
+repo_url: https://github.com/insilichem/BioBrigit
 edit_uri: ''
 plugins:
 - search
@@ -80,4 +80,4 @@ markdown_extensions:
 extra:
   social:
   - icon: fontawesome/brands/github-alt
-    link: https://github.com/IBM/AutoPeptideML
+    link: https://github.com/insilichem/BioBrigit
