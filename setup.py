@@ -11,7 +11,7 @@ readme = (this_directory / "README.md").read_text()
 requirements = [
     'scikit-learn',
     'torch',
-    'moleculekit',
+    'moleculekit==1.8.18',
     'lightning',
     'pdb2pqr'
 ]
@@ -47,6 +47,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/insillichem/BioBrigit',
-    version='0.0.9',
+    version='0.0.10',
     zip_safe=False,
 )
