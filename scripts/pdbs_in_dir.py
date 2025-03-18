@@ -87,11 +87,11 @@ def main():
         args['threads'] = multiprocessing.cpu_count() * 2
 
     brigit = Brigit(**args)
-    for file in os.listdir(args['targets']):
+    for file in os.listdir(args['target_dir']):
         args['outputfile'] = os.path.join(
             args['outputdir'], file.strip('.pdb')
         )
         args['target'] = os.path.join(
-            args['targets'], file
+            args['target_dir'], file
         )
         brigit.predict(**args)
