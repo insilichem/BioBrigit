@@ -67,10 +67,22 @@ def welcome() -> None:
     """
     Print a welcoming message when the program is executed.
     """
-    message = "Using BioBrigit by Raúl Fernández-Díaz"
-    print("-" * (len(message) + 4))
-    print("| " + message + " |")
-    print("-" * (len(message) + 4))
+    mssg1 = "== BioBrigit == "
+    mssg2 = "Copyright: Insilichem\nSupervisor: Jean-Didier Marechal\nMain developer: Raul Fernandez-Diaz"
+    max_width = max([len(line) for line in mssg2.split('\n')])
+    mssg1 = " " * ((max_width - len(mssg1)) // 2) + mssg1 + " " * ((max_width - len(mssg1) + 1) // 2)
+
+    print("-" * (max_width + 3))
+    print("| " + mssg1 + " |")
+    print("| " + " " * max_width + " |")
+    # print("-" * (len(mssg1) + 3))
+    # print(mssg2)
+
+    # print("-" * (max_width + 4))
+    for line in mssg2.split('\n'):
+        print("| " + line + " " * (max_width - len(line)) + " |")
+
+    print("-" * (max_width + 3))
     print()
 
 
