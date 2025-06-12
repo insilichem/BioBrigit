@@ -12,7 +12,8 @@ BioBrigit is a computational tool designed for the prediction of metal diffusion
 Useful links
 ----
 
-- **Pre-print:** [https://www.biorxiv.org/content/10.1101/2024.09.19.613875](https://www.biorxiv.org/content/10.1101/2024.09.19.613875)
+- **Paper:** [https://pubs.acs.org/doi/full/10.1021/acsomega.5c00608](https://pubs.acs.org/doi/full/10.1021/acsomega.5c00608)
+- **Suplementary Information:** [https://zenodo.org/records/15184014](https://zenodo.org/records/15184014)
 
 Features
 --------
