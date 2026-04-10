@@ -11,7 +11,7 @@ readme = (this_directory / "README.md").read_text()
 requirements = [
     'scikit-learn',
     'torch',
-    'moleculekit==1.8.18',
+    'moleculekit',
     'lightning',
     'pdb2pqr'
 ]
